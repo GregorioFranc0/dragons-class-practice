@@ -4,14 +4,30 @@ class Dragon {
     this.color = color;
   }
 
-  breathesFire(name) {
-    console.log(`${name} breathes fire everywhere! BURN!!!!`);
+  breathesFire() {
+    return `${this.name} breathes fire everywhere! BURN!!!!`;
   }
-  static getDragons(...args) {
-    return [dragon.name];
+
+  static getDragons(...dragons) {
+
+    return dragons.map(item => item.name);
+
   }
 
 }
+
+// const puff = new Dragon("Puff", "green");
+// console.log(puff);
+// console.log(puff.breathesFire());
+
+// const toothless = new Dragon("Toothless", "black");
+// console.log(toothless);
+// console.log(toothless.breathesFire());
+
+// const puff = new Dragon("Puff", "green");
+// const toothless = new Dragon("Toothless", "black");
+// console.log(Dragon.getDragons(puff, toothless));
+//module.exports = Dragon;
 /******************* DO NOT EDIT CODE BELOW THIS LINE ***********************/
 
 try {
